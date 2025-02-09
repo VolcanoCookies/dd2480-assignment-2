@@ -157,4 +157,13 @@ public class Builder {
             return null;
         }
     }
+
+    /**
+     * Get all build results.
+     * 
+     * @return returns a list of all build results saved locally.
+     */
+    public static List<BuildResult> getResults() {
+        return new ArrayList<>();
+    }
 }
