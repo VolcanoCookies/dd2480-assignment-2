@@ -125,7 +125,7 @@ public class Builder {
      */
     public void saveResult(BuildResult result) {
         try {
-            FileOutputStream stream = new FileOutputStream(result.commitHash + ".dat");
+            FileOutputStream stream = new FileOutputStream(result.commit.hash + ".dat");
             ObjectOutputStream out = new ObjectOutputStream(stream);
             out.writeObject(result);
             out.flush();

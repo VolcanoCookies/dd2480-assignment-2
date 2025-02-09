@@ -1,9 +1,11 @@
 package org.dd2480;
 
+import java.io.Serializable;
+
 /**
  * Encapsulates all data required to indentify a specific commit.
  */
-public class Commit {
+public class Commit implements Serializable {
 
     public final String repositoryOwner;
     public final String repositoryName;
@@ -11,7 +13,8 @@ public class Commit {
     public final String message;
     public final String branch;
 
-    public Commit(String repositoryOwner, String repositoryName, String commitHash, String commitMessage, String branch) {
+    public Commit(String repositoryOwner, String repositoryName, String commitHash, String commitMessage,
+            String branch) {
         this.repositoryOwner = repositoryOwner;
         this.repositoryName = repositoryName;
         this.hash = commitHash;
